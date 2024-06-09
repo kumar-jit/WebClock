@@ -1,0 +1,260 @@
+:root{
+  --clock-width: 400px;
+  --clock-height: 200px;
+  --clock-face-extrawidth: 10px;
+  --clock-face-extraheight: 10px;
+  --clock-radius: 1rem;
+  --clock-face-border-width: 1.5rem;
+  --clock-face-border-color: #f70000;
+  --clock-face-border-style: solid;
+  --clock-face-border-radius: 1rem;
+  --clock-face-background-color: #fff;
+}
+html,body{
+  font-family: "Nunito", sans-serif;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.clock{
+  border: 1.5rem solid #f70000;
+  position: relative;
+  width:  var(--clock-width);
+  height: var(--clock-height);
+  margin: 50px auto;
+  background: #fff;
+  border-radius: var(--clock-radius);
+  box-shadow: 0 0 0 8px rgba(0,0,0,.1),
+                0 0 0 16px rgba(0,0,0,.05),
+                0 2px 5px rgba(0,0,0,.1),
+}
+
+.clock-face{
+  position: relative;
+  width: calc(var(--clock-width) + var(--clock-face-extrawidth));
+  height: calc(var(--clock-height) + var(--clock-face-extraheight));
+  padding: 5px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: space-between;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border-radius: var(--clock-radius);
+  margin-top: calc(var(--clock-face-extraheight) / 2 - var(--clock-face-extraheight)) ;
+  margin-left: calc(var(--clock-face-extrawidth) / 2 - var(--clock-face-extrawidth));
+  box-shadow:inset 0px 0px 12px 0px rgb(73, 73, 73), 
+                   0px 0px 12px 1px rgb(73, 73, 73);
+}
+
+.time{
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.clock-other-info-container{
+  width: 100%;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  border-top:1px dashed rgb(88, 88, 88);
+}
+.other-info{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-field{
+  width: 50%;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid; */
+  /* height: 100%; */
+}
+
+#timeZone {
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: none;
+  color: rgb(0, 0, 0);
+ 
+}
+
+.vertical{
+  position: absolute;
+  height: 40px;
+  left: 50%;
+}
+.upcoming-alarm{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.alarm-time{
+  display: flex;
+  justify-content: space-between;
+  align-items: space-around;
+}
+.alarm-time > * {
+  padding: 2px 5px;
+  border-radius: 8px;
+  /* background-image: linear-gradient(135deg, #6e8efb, #a777e3); */
+  box-shadow:inset 0px 0px 12px 0px rgba(121, 121, 121, 0.397);
+  margin-left: 8px;
+}
+
+
+.alarm-container{
+  position: relative;
+  width:calc(var(--clock-width)  + 40px)  ;
+  height: auto;
+  margin: 5rem auto;
+  padding: 10px 18px 20px 18px;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px 2px rgba(145, 145, 145, 0.61);
+}
+.setAlarm{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px;
+}
+.alarm-action > *{
+  margin: 0px 5px;
+}
+.setTime{
+  position: relative;
+  width: 25px;
+  outline: none;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 8px;
+  border: none;
+  border-bottom: 1px solid rgba(95, 95, 95, 0.747);
+  font-size: 1.2rem;
+}
+
+.setTimeFormat{
+  position: relative;
+  width: 40px;
+  outline: none;
+  text-align: center;
+  padding: 5px 2px;
+  border-radius: 8px;
+  border: none;
+  border-bottom: 1px solid rgba(95, 95, 95, 0.747);
+  font-size: 1.2rem;
+}
+.setAlarmFormContainer{
+  min-width: 50%;
+  min-height: 4.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:start;
+}
+.setTimeForm{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.weeks-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.day{
+  background-color: #d3d3d3;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.btn{
+  padding: 3px 0px;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  /* width: 35px; */
+  width:70px;
+  min-width: 70px;
+  max-height: 35px;
+  background-color: #ececec8f;
+  box-shadow: 2px 0px 8px 0px rgba(121, 121, 121, 0.397);
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+.btn-set{
+  color: #1230da;
+}
+
+.btn-edit{
+  color: rgb(5, 90, 201);
+}
+
+.btn-delete{
+  color: #f70000;
+}
+
+.alramTitle{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #272626;
+  margin-bottom: 10px;
+}
+.allAlarmsContainer{
+  position: relative;
+  margin-top: 10px;
+}
+.allAlarmsMainContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.datePicker{
+  color: #f70000;
+  border: none;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+.selectedDay{
+  background-color: #0271f0;
+  color: white;
+}
+
+/* #disPlayAlarmContainer{
+  height: calc(100vh - 60vh);
+  overflow: scroll;
+  -ms-overflow-style: none;
+} */
+
+#disPlayAlarmContainer .setAlarm{
+  border-bottom: 1px solid rgb(167, 167, 167);
+  padding-bottom: 13px;
+}

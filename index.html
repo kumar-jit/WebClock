@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Clock</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./Common/style.css" type="text/css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="clock">
+      <div class="clock-face">
+        <div class="time" id="time-container">
+          <span class="hour" id="hour">00</span>
+          <span class="timeDiv">:</span>
+          <span class="minute" id="minute">00</span>
+          <span class="timeDiv">:</span>
+          <span class="second" id="second">00</span>
+          <span>&nbsp</span>
+          <span class="am-pm" id="timeFormat">PM</span>
+        </div>
+        <div class="clock-other-info-container">
+          <div class="other-info">
+            <span class="info-field"> <b>Date :&nbsp&nbsp</b><span id="toDay"> May 23 2024</span></span>
+            <div class="info-field" id="toDayWeather">
+              <label for="timeZone"><b>Zone :</b></label>
+              <select id="timeZone" onchange="onTimeZoneChange(this)"></select>
+            </div>
+          </div>
+          <!-- <hr class="vertical"> -->
+          <div class="other-info">
+            <div class="upcoming-alarm">
+              <span><b>Upcoming Alarm :</b></span>
+              <div class="alarm-time" id="upcomingAlarm">
+                <span class="alarm-info">
+                  12:30:00 PM
+                </span>
+                <span class="alarm-info">
+                  12:30:00 PM
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alarm-container">
+      <p class="alramTitle">Set Alarm (IST)</p>
+      <div class="setAlarm" id="setAlarm">
+        <div class="setAlarmFormContainer">
+          <div class="setTimeForm">
+            <input type="number" class="setTime" oninput="limitDigits(event,this)" name="hour" maxlength="2"
+              placeholder="HH">
+            <span>:</span>
+            <input type="number" class="setTime" oninput="limitDigits(event,this)" name="minute" maxlength="2"
+              placeholder="MM">
+            <span>:</span>
+            <input type="number" class="setTime" oninput="limitDigits(event,this)" name="second" maxlength="2"
+              placeholder="SS">
+            <input type="text" class="setTimeFormat" oninput="limitDigits(event,this)" name="format" maxlength="2"
+              placeholder="AM">
+          </div>
+
+          <div class="weeks-container">
+            <span data-day="0" class="day" onclick="onWeekDaysPress(this)">S</span>
+            <span data-day="1" class="day selectedDay" onclick="onWeekDaysPress(this)">M</span>
+            <span data-day="2" class="day selectedDay" onclick="onWeekDaysPress(this)">T</span>
+            <span data-day="3" class="day selectedDay" onclick="onWeekDaysPress(this)">W</span>
+            <span data-day="4" class="day selectedDay" onclick="onWeekDaysPress(this)">T</span>
+            <span data-day="5" class="day selectedDay" onclick="onWeekDaysPress(this)">F</span>
+            <span data-day="6" class="day" onclick="onWeekDaysPress(this)">S</span>
+          </div>
+        </div>
+        <div class="alarm-action">
+          <button class="btn btn-set" onclick="createAlarm(this)"><span
+              class="material-symbols-rounded">add_alert</span></button>
+        </div>
+      </div>
+      <div class="allAlarmsContainer">
+        <p class="alramTitle">Alarms (IST)</p>
+        <!-- <hr width="100%" style="height: 1px;border: 1px solid rgb(112, 112, 112);background: rgb(112, 112, 112);"> -->
+        <div class="allAlarmsMainContainer" id="disPlayAlarmContainer"></div>
+      </div>
+      <script src="./Common/script.js"></script>
+    </div>
+</body>
+
+</html>
+
+<!-- <span class="material-symbols-rounded">
+  toggle_off
+  </span> -->
