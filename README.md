@@ -14,7 +14,7 @@ Visit the application: [WebClock](https://kumar-jit.github.io/WebClock/)
 
 ## Features
 - Display current time for multiple regions.
-- Set alarms with customizable messages.
+- Set alarms with customizable days.
 - Easy-to-use interface.
 
 ## Installation
