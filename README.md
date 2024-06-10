@@ -6,10 +6,12 @@ WebClock is a web-based application that displays the current time for multiple 
 Visit the application: WebClock
 
 <h3>Table of Contents</h3>
-Features
-Installation
-Usage
-Contributing
+<ul>
+    <li>Features</li>
+    <li>Installation</li>
+    <li>Usage</li>
+    <li>Contributing</li>
+</ul>
 
 <h3>Features</h3>
 Display current time for multiple regions.
@@ -23,9 +25,11 @@ To run the WebClock application locally, follow these steps:
 Clone the repository:
 
 bash
-Copy code
-git clone https://github.com/kumar-jit/WebClock.git
-cd WebClock
+<sub>git clone https://github.com/kumar-jit/WebClock.git
+    cd WebClock 
+</sub>
+
+
 Open index.html in your web browser:
 
 You can simply double-click the index.html file or open it using a web server.
