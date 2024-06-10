@@ -18,8 +18,11 @@
 </head>
 
 <body>
-  
+
   <div class="container">
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                               clock face                                -->
+    <!-- ----------------------------------------------------------------------- -->
     <div class="clock">
       <div class="clock-face">
         <div class="time" id="time-container">
@@ -33,7 +36,8 @@
         </div>
         <div class="clock-other-info-container">
           <div class="other-info">
-            <span class="info-field"> <b class="subTitle">Date :&nbsp&nbsp</b><span id="toDay"> May 23 2024</span></span>
+            <span class="info-field"> <b class="subTitle">Date :&nbsp&nbsp</b><span id="toDay"> May 23
+                2024</span></span>
             <div class="info-field" id="toDayWeather">
               <label for="timeZone"><b class="subTitle">Zone :</b></label>
               <select id="timeZone" onchange="onTimeZoneChange(this)"></select>
@@ -50,6 +54,9 @@
         </div>
       </div>
     </div>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              Alarm Section                              -->
+    <!-- ----------------------------------------------------------------------- -->
     <div class="alarm-container">
       <p class="alramTitle">Set Alarm (IST)</p>
       <div class="setAlarm" id="setAlarm">
@@ -84,20 +91,15 @@
       </div>
       <div class="allAlarmsContainer">
         <p class="alramTitle">Alarms (IST)</p>
-        <!-- <hr width="100%" style="height: 1px;border: 1px solid rgb(112, 112, 112);background: rgb(112, 112, 112);"> -->
         <div class="allAlarmsMainContainer" id="disPlayAlarmContainer"></div>
       </div>
-      
+
     </div>
   </div>
   <audio controls style="display: none;" id="audio">
-    <source src="./assetes/sweet_sms.mp3" type="audio/ogg" >
+    <source src="./assetes/sweet_sms.mp3" type="audio/ogg">
   </audio>
   <script src="./Common/script.js"></script>
 </body>
 
 </html>
-
-<!-- <span class="material-symbols-rounded">
-  toggle_off
-  </span> -->
