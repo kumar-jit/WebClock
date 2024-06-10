@@ -514,17 +514,28 @@ class Alarm {
     }
     btn1.addEventListener("click", (oEvent) => {
       let actionText = oEvent.target.innerHTML;
+      const cheks = oEvent.target.parentNode.type;
       let payLoad = this.#alarmDateTime;
       payLoad.days = this.#days;
 
-      if (actionText == "alarm_off") {
-        payLoad.status = true;
-        setAlarmDetailsToDB(payLoad);
-        oEvent.target.innerHTML = "alarm_on";
-      } else {
+      if(this.#days.size == 0){
+        this.#status = false;
         payLoad.status = false;
         setAlarmDetailsToDB(payLoad);
-        oEvent.target.innerHTML = "alarm_off";
+        oEvent.target.innerHTML = (cheks == "submit")? "alarm_off" : `<span class="material-symbols-rounded">alarm_off</span>`;
+        return;
+      }
+
+      if (!this.#status) {
+        payLoad.status = true;
+        this.#status = true;
+        setAlarmDetailsToDB(payLoad);
+        oEvent.target.innerHTML = (cheks == "submit")? "alarm_on" : `<span class="material-symbols-rounded">alarm_on</span>`;
+      } else {
+        payLoad.status = false;
+        this.#status = false;
+        setAlarmDetailsToDB(payLoad);
+        oEvent.target.innerHTML = (cheks == "submit")? "alarm_off" : `<span class="material-symbols-rounded">alarm_off</span>`;
       }
     });
     eAlarmActionContainer.appendChild(btn1);

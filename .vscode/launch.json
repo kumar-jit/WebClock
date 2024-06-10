@@ -7,7 +7,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "C:\\Users\\kumar\\OneDrive\\Documents\\HTML\\Js_Skill_Test1\\index.html", // Provide your project's url to finish configuring
+            "url": "C:\\Users\\kumar\\OneDrive\\Documents\\HTML\\Js_Skill_Test1\\WebClock\\index.html", // Provide your project's url to finish configuring
             "presentation": {
                 "hidden": true
             }
@@ -20,7 +20,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "C:\\Users\\kumar\\OneDrive\\Documents\\HTML\\Js_Skill_Test1\\index.html", // Provide your project's url to finish configuring
+            "url": "C:\\Users\\kumar\\OneDrive\\Documents\\HTML\\Js_Skill_Test1\\WebClock\\index.html", // Provide your project's url to finish configuring
             "presentation": {
                 "hidden": true
             }
@@ -29,7 +29,7 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "C:\\Users\\kumar\\OneDrive\\Documents\\HTML\\Js_Skill_Test1\\index.html", // Provide your project's url to finish configuring
+            "url": "C:\\Users\\kumar\\OneDrive\\Documents\\HTML\\Js_Skill_Test1\\WebClock\\index.html", // Provide your project's url to finish configuring
             "presentation": {
                 "hidden": true
             }
