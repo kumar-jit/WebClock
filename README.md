@@ -2,16 +2,16 @@
 
 WebClock is a web-based application that displays the current time for multiple regions and allows users to set alarms. This application is designed to be simple, user-friendly, and highly customizable.
 
-<h5>Project Link</h5>
+<h3>Project Link</h3>
 Visit the application: WebClock
 
-<h5>Table of Contents</h5>
+<h3>Table of Contents</h3>
 Features
 Installation
 Usage
 Contributing
 
-<h5>Features</h5>
+<h3>Features</h3>
 Display current time for multiple regions.
 Set alarms with customizable messages.
 Responsive design, compatible with all devices.
