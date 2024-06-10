@@ -33,23 +33,17 @@
         </div>
         <div class="clock-other-info-container">
           <div class="other-info">
-            <span class="info-field"> <b>Date :&nbsp&nbsp</b><span id="toDay"> May 23 2024</span></span>
+            <span class="info-field"> <b class="subTitle">Date :&nbsp&nbsp</b><span id="toDay"> May 23 2024</span></span>
             <div class="info-field" id="toDayWeather">
-              <label for="timeZone"><b>Zone :</b></label>
+              <label for="timeZone"><b class="subTitle">Zone :</b></label>
               <select id="timeZone" onchange="onTimeZoneChange(this)"></select>
             </div>
           </div>
           <!-- <hr class="vertical"> -->
           <div class="other-info">
             <div class="upcoming-alarm">
-              <span><b>Upcoming Alarm :</b></span>
+              <span><b class="subTitle">Upcoming Alarm :</b></span>
               <div class="alarm-time" id="upcomingAlarm">
-                <span class="alarm-info">
-                  12:30:00 PM
-                </span>
-                <span class="alarm-info">
-                  12:30:00 PM
-                </span>
               </div>
             </div>
           </div>
@@ -93,9 +87,13 @@
         <!-- <hr width="100%" style="height: 1px;border: 1px solid rgb(112, 112, 112);background: rgb(112, 112, 112);"> -->
         <div class="allAlarmsMainContainer" id="disPlayAlarmContainer"></div>
       </div>
-      <script src="./Common/script.js"></script>
+      
     </div>
   </div>
+  <audio controls style="display: none;" id="audio">
+    <source src="./assetes/sweet_sms.mp3" type="audio/ogg" >
+  </audio>
+  <script src="./Common/script.js"></script>
 </body>
 
 </html>

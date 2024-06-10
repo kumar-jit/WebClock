@@ -1,17 +1,49 @@
 :root{
+  /* clock dimention */
   --clock-width: 400px;
   --clock-height: 200px;
   --clock-face-extrawidth: 10px;
   --clock-face-extraheight: 10px;
   --clock-radius: 1rem;
-  --clock-face-border-width: 1.5rem;
-  --clock-face-border-color: #f70000;
-  --clock-face-border-style: solid;
-  --clock-face-border-radius: 1rem;
-  --clock-face-background-color: #fff;
 }
+
+:root {
+  /* Background Colors */
+  --primary-bg: #1A0A2D;
+  --secondary-bg: #2B153F;
+  --accent-bg: #3B1E4D;
+
+  /* Text Colors */
+  --primary-text: #EAEAEA;
+  --secondary-text: #C3A0C3;
+  --accent-text: #D18DF8;
+
+  /* Shadow Colors */
+  --shadow-color:#4823684d;
+  --shadow-color2:var(--primary-bg);
+  --shadow-color3:var(--primary-highlight);
+
+  /* Highlight Colors */
+  --primary-highlight: #D18DF8;
+  --secondary-highlight: #B862E1;
+  --warning-highlight: #E57373;
+
+  /* Button Colors */
+  --primary-button-bg: #b852e7;
+  --primary-button-text: #000000;
+  --secondary-button-bg: #d691fd;
+  --secondary-button-text: #FFFFFF;
+
+  /* Border Colors */
+  --primary-border: #341A4A;
+  --accent-border: #D18DF8;
+}
+
+
 html,body{
   font-family: "Nunito", sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -22,16 +54,15 @@ input::-webkit-inner-spin-button {
 
 
 .clock{
-  border: 1.5rem solid #f70000;
+  border: 1.5rem solid var(--primary-bg);
   position: relative;
   width:  var(--clock-width);
   height: var(--clock-height);
   margin: 50px auto;
-  background: #fff;
   border-radius: var(--clock-radius);
-  box-shadow: 0 0 0 8px rgba(0,0,0,.1),
-                0 0 0 16px rgba(0,0,0,.05),
-                0 2px 5px rgba(0,0,0,.1),
+  box-shadow: 0 0 5px 5px var(--shadow-color),
+              0 0 15px 10px var(--shadow-color)
+
 }
 
 .clock-face{
@@ -44,12 +75,12 @@ input::-webkit-inner-spin-button {
   justify-content: space-around;
   align-items: space-between;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--secondary-highlight);
   border-radius: var(--clock-radius);
   margin-top: calc(var(--clock-face-extraheight) / 2 - var(--clock-face-extraheight)) ;
   margin-left: calc(var(--clock-face-extrawidth) / 2 - var(--clock-face-extrawidth));
-  box-shadow:inset 0px 0px 12px 0px rgb(73, 73, 73), 
-                   0px 0px 12px 1px rgb(73, 73, 73);
+  box-shadow:inset 0px 0px 12px 0px var(--shadow-color2), 
+                   0px 0px 12px 1px rgba(250, 42, 250, 0.158);
 }
 
 .time{
@@ -67,7 +98,7 @@ input::-webkit-inner-spin-button {
   height: 95px;
   display: flex;
   flex-direction: column;
-  border-top:1px dashed rgb(88, 88, 88);
+  border-top:1px dashed var(--primary-border);
 }
 .other-info{
   width: 100%;
@@ -109,14 +140,23 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   align-items: space-around;
 }
-.alarm-time > * {
-  padding: 2px 5px;
-  border-radius: 8px;
-  /* background-image: linear-gradient(135deg, #6e8efb, #a777e3); */
-  box-shadow:inset 0px 0px 12px 0px rgba(121, 121, 121, 0.397);
-  margin-left: 8px;
+
+#timeZone {
+  background-color: var(--secondary-highlight);
+  color: var(--primary-text);
 }
 
+.subTitle{
+  color: var(--primary-button-text);
+}
+
+.alarm-info{
+  background-color: var(--secondary-highlight);
+  box-shadow: 0px 0px 8px 2px var(--shadow-color);
+  margin-left: 10px;
+  padding: 2px 5px;
+  border-radius: 8px;
+}
 
 .alarm-container{
   position: relative;
@@ -126,7 +166,10 @@ input::-webkit-inner-spin-button {
   padding: 10px 18px 20px 18px;
   box-sizing: border-box;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 10px 2px rgba(145, 145, 145, 0.61);
+  background-color: var(--secondary-bg);
+  box-shadow: 0 0 5px 5px var(--shadow-color),
+              0 0 15px 10px var(--shadow-color)
+              /* 0px 0px 10px 2px var(--shadow-color); */
 }
 .setAlarm{
   display: flex;
@@ -147,7 +190,7 @@ input::-webkit-inner-spin-button {
   padding: 5px 8px;
   border-radius: 8px;
   border: none;
-  border-bottom: 1px solid rgba(95, 95, 95, 0.747);
+  border-bottom: 1px solid var(--secondary-text);
   font-size: 1.2rem;
 }
 
@@ -184,7 +227,8 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 .day{
-  background-color: #d3d3d3;
+  background-color: var(--secondary-button-bg);
+  color: var(--secondary-button-text);
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 50%;
@@ -203,28 +247,31 @@ input::-webkit-inner-spin-button {
   width:70px;
   min-width: 70px;
   max-height: 35px;
-  background-color: #ececec8f;
-  box-shadow: 2px 0px 8px 0px rgba(121, 121, 121, 0.397);
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-text);
+  box-shadow: 2px 0px 8px 0px var(--shadow-color);
   /* overflow: hidden; */
   cursor: pointer;
 }
 
 .btn-set{
-  color: #1230da;
+  color: var(--primary-text);;
 }
 
 .btn-edit{
-  color: rgb(5, 90, 201);
+  background-color: var(--primary-highlight);
+  color: var(--primary-button-text)
 }
 
 .btn-delete{
-  color: #f70000;
+  background-color: var(--warning-highlight);
+  color: var(--primary-text);
 }
 
 .alramTitle{
   font-size: 1.5rem;
   font-weight: 600;
-  color: #272626;
+  color: var(--primary-text);
   margin-bottom: 10px;
 }
 .allAlarmsContainer{
@@ -238,14 +285,14 @@ input::-webkit-inner-spin-button {
 }
 
 .datePicker{
-  color: #f70000;
+  color: var(--secondary-text);
   border: none;
   font-size: 1rem;
   margin-top: 5px;
 }
 .selectedDay{
-  background-color: #0271f0;
-  color: white;
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-text);
 }
 
 /* #disPlayAlarmContainer{
@@ -255,6 +302,6 @@ input::-webkit-inner-spin-button {
 } */
 
 #disPlayAlarmContainer .setAlarm{
-  border-bottom: 1px solid rgb(167, 167, 167);
+  border-bottom: 1px solid var(--accent-text);
   padding-bottom: 13px;
 }

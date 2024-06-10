@@ -180,7 +180,13 @@ function checkForAlarm(key){
     if (oAlaram != null && typeof oAlaram === 'object' && Object.keys(oAlaram).length > 0) {
         let { dayOfWeek, expires } = JSON.parse(storedData);
         if(oAlaram && oAlaram.status && oAlaram.days.has(JSON.stringify(dayOfWeek)) ){
-            alert("alarm");
+            const eAudio = document.getElementById("audio");
+            if (eAudio) {
+                eAudio.play();
+                alert("Alarm!! Alarm!! Alarm!!");
+                eAudio.pause();
+                eAudio.currentTime = 0;
+            }
         }
     }
 }
@@ -241,7 +247,9 @@ function createAlarm(oEvent){
             setAlarmDetailsToDB({...payload});
             let alarm1 = new Alarm(payload);
         }
-        console.log(payload);
+        else{
+            alert("Please select diffrent time!!.. Same time already exists.")
+        }
     }
     else{
         alert("Please enter correct time");

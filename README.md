@@ -38,3 +38,4 @@ To run the WebClock application locally, follow these steps:
     - Click "Save" to set the alarm. You will be notified when the alarm goes off.
 
 ## Snapshot
+![alt text](image.png)
