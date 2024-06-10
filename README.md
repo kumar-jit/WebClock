@@ -34,7 +34,6 @@ To run the WebClock application locally, follow these steps:
     - You can customize the regions by editing the `regions` array in `script.js`.
 2. **Set Alarms:**
     - Click on the "Set Alarm" button.
-    - Enter the time and message for the alarm.
     - Click "Save" to set the alarm. You will be notified when the alarm goes off.
 
 ## Snapshot
