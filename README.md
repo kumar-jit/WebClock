@@ -2,10 +2,10 @@
 
 WebClock is a web-based application that displays the current time for multiple regions and allows users to set alarms. This application is designed to be simple, user-friendly, and highly customizable.
 
-<h3>Project Link</h3>
+<h2>Project Link</h2>
 Visit the application: WebClock
 
-<h3>Table of Contents</h3>
+<h2>Table of Contents</h2>
 <ul>
     <li>Features</li>
     <li>Installation</li>
@@ -13,21 +13,25 @@ Visit the application: WebClock
     <li>Contributing</li>
 </ul>
 
-<h3>Features</h3>
+<h2>Features</h2>
 Display current time for multiple regions.
 Set alarms with customizable messages.
 Responsive design, compatible with all devices.
 Easy-to-use interface.
-Light and dark themes.
-Installation
+
+<h2>Installation</h2>
 To run the WebClock application locally, follow these steps:
+<ol>
+    <li>
+        <h3>Clone the repository:</h3>
+        <sub>git clone https://github.com/kumar-jit/WebClock.git
+            cd WebClock 
+        </sub>
+    </li>
+</ol>
 
-Clone the repository:
 
-bash
-<sub>git clone https://github.com/kumar-jit/WebClock.git
-    cd WebClock 
-</sub>
+
 
 
 Open index.html in your web browser:
