@@ -28,35 +28,29 @@ To run the WebClock application locally, follow these steps:
             cd WebClock 
         </sub>
     </li>
+    <li>
+        <h3>Open `index.html` in your web browser:</h3>
+            You can simply double-click the index.html file or open it using a web server.
+        <sub>git clone https://github.com/kumar-jit/WebClock.git
+            cd WebClock 
+        </sub>
+    </li>
 </ol>
 
 
-
-
-
-Open index.html in your web browser:
-
-You can simply double-click the index.html file or open it using a web server.
-
-bash
-Copy code
-open index.html
-Usage
-View Time for Multiple Regions:
-
-The main page displays the current time for predefined regions.
-You can customize the regions by editing the regions array in script.js.
-Set Alarms:
-
-Click on the "Set Alarm" button.
-Enter the time and message for the alarm.
-Click "Save" to set the alarm. You will be notified when the alarm goes off.
-Contributing
-We welcome contributions from the community! To contribute to WebClock, please follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -am 'Add some feature').
-Push to the branch (git push origin feature/YourFeature).
-Create a new Pull Request.
-Please make sure to update tests as appropriate.
+<h2>Usage</h2>
+<ol>
+    <li><h3>View Time for Multiple Regions:</h3>
+        <ul>
+            <li>The main page displays the current time for predefined regions.</li>
+            <li>You can customize the regions by editing the regions array in `script.js`.</li>
+        </ul>
+    </li>
+    <li><h3>Set Alarms:</h3>
+        <ul>
+            <li>Click on the "Set Alarm" button.</li>
+            <li>Enter the time and message for the alarm.</li>
+            <li>Click "Save" to set the alarm. You will be notified when the alarm goes off.</li>
+        </ul>
+    </li>
+</ol>
